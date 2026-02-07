@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { User } from '$lib/shared/User';
 	import UserCard from '$lib/components/UserCard.svelte';
-	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+	import { TabGroup, TabAnchor } from '@skeletonlabs/skeleton';
 
 	let activeTab = 'followingThatDontFollowYou';
 
