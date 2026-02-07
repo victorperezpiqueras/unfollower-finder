@@ -40,12 +40,16 @@ describe('FileUpload Component', () => {
 			following: mockFollowing
 		});
 
-		// Render the component
-		const { getByTestId, component } = render(FileUpload);
-
 		// Listen for the 'uploadComplete' event
 		const uploadComplete = vi.fn();
-		component.$on('uploadComplete', uploadComplete);
+
+		// Render the component with the event handler
+		const { getByTestId } = render(FileUpload, {
+			props: {},
+			events: {
+				uploadComplete
+			}
+		});
 
 		// Act
 		const button = getByTestId('file-dropzone').querySelector(
